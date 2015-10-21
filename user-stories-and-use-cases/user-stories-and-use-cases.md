@@ -36,4 +36,21 @@ Based on the user stories mentioned above this would be our initial use cases.
   * Mobile applications shows answer from backend
 
 **Use case: Show location to friend**
-* Actors: registered user Alice, registered user Bob, mobile application, backend
+* Actors: registered user Alice, mobile application, backend
+* Flow
+  * Alice taps on the button 'Share location'
+  * Mobile application shows current position on a map and asks Alice to confirm the position
+    * Confirmed: Alice can select friend which she wants to share the location
+    * Unconfirmed: Alice can select her current position
+  * Mobile application sends location and friendlist to backend
+  * Backend takes current position of Alice and saves it
+  * Backend returns a success message or a error message
+  * Mobile application shows anser from backend
+
+**Use case: Find a friend**
+* Actors: registered user Bob, mobile application, backend
+* Flow
+  * Bob taps on 'Find a friend'
+  * Mobile application list all friends of Bob
+  * Bob selects a friend ('Alice')
+  * 
