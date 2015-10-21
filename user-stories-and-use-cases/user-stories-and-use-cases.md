@@ -35,22 +35,25 @@ Based on the user stories mentioned above this would be our initial use cases.
     * Found: backend adds 'Bob' to Alice's friend list and returns success message
   * Mobile applications shows answer from backend
 
-**Use case: Show location to friend**
+**Use case: Show location to friends**
 * Actors: registered user Alice, mobile application, backend
 * Flow
   * Alice taps on the button 'Share location'
   * Mobile application shows current position on a map and asks Alice to confirm the position
-    * Confirmed: Alice can select friend which she wants to share the location
     * Unconfirmed: Alice can select her current position
-  * Mobile application sends location and friendlist to backend
-  * Backend takes current position of Alice and saves it
-  * Backend returns a success message or a error message
-  * Mobile application shows anser from backend
+    * Confirmed: proceed
+  * Alice chooses between sharing her location with all her friends or just a selected few ones
+  * Mobile application sends location and sharing data to backend
+  * Backend takes current position of Alice, saves it and notifies either all her friends or just the stated ones
+  * Backend returns a success message or an error message
+  * Mobile application shows answer from backend
 
-**Use case: Find a friend**
+**Use case: Turn off location tracking**
 * Actors: registered user Bob, mobile application, backend
 * Flow
-  * Bob taps on 'Find a friend'
-  * Mobile application list all friends of Bob
-  * Bob selects a friend ('Alice')
-  * 
+  * Bob taps on 'Turn off location'
+  * Mobile application sends 'quit' signal to backend and disables Bluetooth
+  * Backend receives 'quit' signal and tries to delete last saved location from database and to deny all further location requests by Bob's friends
+    * Failure: backend signals mobile application that an error occured
+    * Success: backend transmit a success message to mobile application
+  * Mobile application displays shut down message from backend
