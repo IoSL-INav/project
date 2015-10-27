@@ -4,6 +4,7 @@ Andy and I are proposing following user stories to guide the initial phase of ou
 
 * As a user, I want to be able to use the app in order to locate my friends
 * As a user, I want to share my location so that my friends can find me
+* As a user, I want to be able to see my friends already located in my area
 * As a user, I want to be able to add friends in order to share locations
 * As a user, I want to restrict the location access to only my selected friends
 * As a user, I want to be able to completely turn off the location tracking
@@ -47,6 +48,17 @@ Based on the user stories mentioned above this would be our initial use cases.
   * Backend takes current position of Alice, saves it and notifies either all her friends or just the stated ones
   * Backend returns a success message or an error message
   * Mobile application shows answer from backend
+
+**Use case: Find friends already in my area**
+* Actors: registered user Alice, mobile application, backend
+* Flow
+  * Alice taps on the button 'Show friends in my area'
+  * Mobile application performs a request to backend asking for users in Alice' friends list with currently turned on location tracking in Alice area
+  * Backend receives the request and queries database for Alice' friends within a defined radius of Alice position
+  * Backend builds a response and sends it back to mobile application
+    * Empty user list: No friends of Alice currently have location tracking enabled and are in Alice' area
+    * User list: These friends of Alice meet the criteria
+  * Mobile application takes response and either signals that no trackable friends are currently around or shows a map with drawn locations.
 
 **Use case: Turn off location tracking**
 * Actors: registered user Bob, mobile application, backend
