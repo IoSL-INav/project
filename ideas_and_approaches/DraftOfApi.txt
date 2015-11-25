@@ -1,7 +1,9 @@
+# get user id
+/me
 
 # create and modify friendlist
 /lists
-## show all lists of the user
+## show all lists
 GET lists/
 ## create a list
 POST lists/
@@ -18,7 +20,7 @@ DELETE lists/id/users/uid
 
 # context information for finding your peers
 /meetings
-## get all current meetings for authorized user 
+## get all current meetings
 GET meetings/
 ## create a meeting (include location)
 POST meetings/
@@ -58,3 +60,7 @@ GET users/id
 PUT users/id
 ## delete user
 DELETE users/id
+## get all lists of user
+GET users/id/lists
+## get all meetings of user
+GET users/id/meetings
