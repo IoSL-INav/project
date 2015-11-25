@@ -1,0 +1,60 @@
+
+# create and modify friendlist
+/lists
+## show all lists of the user
+GET lists/
+## create a list
+POST lists/
+## show list information
+GET lists/id
+## change list information
+PUT lists/id
+## delete list
+DELETE lists/id
+## add user to list
+PUT lists/id/users
+## remove user from list
+DELETE lists/id/users/uid
+
+# context information for finding your peers
+/meetings
+## get all current meetings for authorized user 
+GET meetings/
+## create a meeting (include location)
+POST meetings/
+## get information about one meeting
+GET meetings/id
+## get location of a meeting (public for all participants)
+GET meetings/id/location
+## update meeting
+PUT meetings/id
+## delete a meeting
+DELETE meetings/id
+
+# beacon
+/beacons
+## get all beacons information
+GET beacons/
+## add a beacon with location
+POST beacons/
+## get information of beacon
+GET beacons/id
+## change beacon information
+PUT beacons/id
+## delete a beacon from database
+DELETE beacons/id
+## get location of beacon
+GET beacons/id/location
+
+# users
+/users
+## get list of all users
+GET users/
+## add user to system
+POST users/
+## get information of user
+GET users/id
+## change user information
+PUT users/id
+## delete user
+DELETE users/id
