@@ -10,4 +10,4 @@ Main repository for keeping track of the overall project and team organisation.
 
 # Meeting notes
 
-Inside the memo folder.
+Inside the memos folder.
