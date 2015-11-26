@@ -1,8 +1,11 @@
 #####
 # Get currently authorized user's ID
-/me
+/users/me
 #####
 
+/users/me/friends
+/users/me/lists/1
+/users/me/lists/2
 
 #####
 # Create and modify friends lists
@@ -30,6 +33,36 @@ PUT lists/id/users
 DELETE lists/id/users/uid
 #####
 
+Hotspot
+/hotspots
+/hotspots/{id}
+/hotspots/mensa
+/hotspots/library
+/hotspots/mensa/beacons/{id}
+/hotspots/library/beacons/{id}
+
+
+/hotspots/mensa/active_friends
+{
+  friends: [871283,8172837213]
+  friends_locations: [{
+    id: 9820189238,
+    location : {
+      lat: 928931,
+      lon: 12989312
+    }
+  }]
+}
+
+Subinformation (Q: Where should it be persisted? User model, Hotspot model?):
+-> Autoping YES/NO: If I enter the hotspot please ping my friends automatically
+-> AutoLocation YES/NO: Locate me via Bluetooth automatically when I have turned it on 
+
+Use cases:
+-> Notify ME if I enter the hotspot
+--> Option: Ping my Friends at the hotspot
+--> Option: Detail my location: either via Bluetooth or by manual pinnning
+-> Notify ME if others are already at the hotspot where I entered
 
 #####
 # Context information for finding a user's peers
