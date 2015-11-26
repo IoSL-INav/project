@@ -1,66 +1,106 @@
-# get user id
+#####
+# Get currently authorized user's ID
 /me
+#####
 
-# create and modify friendlist
+
+#####
+# Create and modify friends lists
 /lists
-## show all lists
+
+## Show all lists
 GET lists/
-## create a list
+
+## Create a list
 POST lists/
-## show list information
+
+## Show list information
 GET lists/id
-## change list information
+
+## Change list information
 PUT lists/id
-## delete list
+
+## Delete list
 DELETE lists/id
-## add user to list
+
+## Add user to list
 PUT lists/id/users
-## remove user from list
+
+## Remove user from list
 DELETE lists/id/users/uid
+#####
 
-# context information for finding your peers
+
+#####
+# Context information for finding a user's peers
 /meetings
-## get all current meetings
+
+## Get all current meetings
 GET meetings/
-## create a meeting (include location)
+
+## Create a meeting (including location)
 POST meetings/
-## get information about one meeting
+
+## Get information about one meeting
 GET meetings/id
-## get location of a meeting (public for all participants)
+
+## Get location of a meeting (public for all participants)
 GET meetings/id/location
-## update meeting
+
+## Update meeting
 PUT meetings/id
-## delete a meeting
+
+## Delete a meeting
 DELETE meetings/id
+#####
 
-# beacon
+
+#####
+# Bluetooth beacons related endpoints
 /beacons
-## get all beacons information
-GET beacons/
-## add a beacon with location
-POST beacons/
-## get information of beacon
-GET beacons/id
-## change beacon information
-PUT beacons/id
-## delete a beacon from database
-DELETE beacons/id
-## get location of beacon
-GET beacons/id/location
 
-# users
+## Get information of all all beacons
+GET beacons/
+
+## Add a beacon with location
+POST beacons/
+
+## Get information of beacon
+GET beacons/id
+
+## Change beacon information
+PUT beacons/id
+
+## Delete a beacon from database
+DELETE beacons/id
+
+## Get location of beacon
+GET beacons/id/location
+#####
+
+
+#####
+# Endpoints needed for user management
 /users
-## get list of all users
+
+## Get list of all users
 GET users/
-## add user to system
+
+## Add user to system
 POST users/
-## get information of user
+
+## Get information of user
 GET users/id
-## change user information
+
+## Change user information
 PUT users/id
-## delete user
+
+## Delete user
 DELETE users/id
-## get all lists of user
+
+## Get all lists of user
 GET users/id/lists
-## get all meetings of user
+
+## Get all meetings of user
 GET users/id/meetings
+#####
