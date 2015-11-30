@@ -4,33 +4,28 @@
 #####
 
 /users/me/friends
-/users/me/lists/1
-/users/me/lists/2
 
 #####
 # Create and modify friends lists
-/lists
-
-## Show all lists
-GET lists/
+/users/me/lists
 
 ## Create a list
-POST lists/
+POST users/me/lists/
 
 ## Show list information
-GET lists/id
+GET users/me/lists/id
 
 ## Change list information
-PUT lists/id
+PUT users/me/lists/id
 
 ## Delete list
-DELETE lists/id
+DELETE users/me/lists/id
 
-## Add user to list
-PUT lists/id/users
+## Add user to list TODO: think about a better one
+PUT users/me/lists/id/users
 
-## Remove user from list
-DELETE lists/id/users/uid
+## Remove user from list TODO: think about a better one
+DELETE users/me/lists/id/users/uid
 #####
 
 Hotspot
@@ -56,7 +51,7 @@ Hotspot
 
 Subinformation (Q: Where should it be persisted? User model, Hotspot model?):
 -> Autoping YES/NO: If I enter the hotspot please ping my friends automatically
--> AutoLocation YES/NO: Locate me via Bluetooth automatically when I have turned it on 
+-> AutoLocation YES/NO: Locate me via Bluetooth automatically when I have turned it on
 
 Use cases:
 -> Notify ME if I enter the hotspot
