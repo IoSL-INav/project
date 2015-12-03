@@ -1,113 +1,4 @@
 #####
-# Get currently authorized user's ID
-/users/me
-#####
-
-/users/me/friends
-
-#####
-# Create and modify friends lists
-/users/me/lists
-
-## Create a list
-POST users/me/lists/
-
-## Show list information
-GET users/me/lists/id
-
-## Change list information
-PUT users/me/lists/id
-
-## Delete list
-DELETE users/me/lists/id
-
-## Add user to list TODO: think about a better one
-PUT users/me/lists/id/users
-
-## Remove user from list TODO: think about a better one
-DELETE users/me/lists/id/users/uid
-#####
-
-Hotspot
-/hotspots
-/hotspots/{id}
-/hotspots/mensa
-/hotspots/library
-/hotspots/mensa/beacons/{id}
-/hotspots/library/beacons/{id}
-
-
-/hotspots/mensa/active_friends
-{
-  friends: [871283,8172837213]
-  friends_locations: [{
-    id: 9820189238,
-    location : {
-      lat: 928931,
-      lon: 12989312
-    }
-  }]
-}
-
-Subinformation (Q: Where should it be persisted? User model, Hotspot model?):
--> Autoping YES/NO: If I enter the hotspot please ping my friends automatically
--> AutoLocation YES/NO: Locate me via Bluetooth automatically when I have turned it on
-
-Use cases:
--> Notify ME if I enter the hotspot
---> Option: Ping my Friends at the hotspot
---> Option: Detail my location: either via Bluetooth or by manual pinnning
--> Notify ME if others are already at the hotspot where I entered
-
-#####
-# Context information for finding a user's peers
-/meetings
-
-## Get all current meetings
-GET meetings/
-
-## Create a meeting (including location)
-POST meetings/
-
-## Get information about one meeting
-GET meetings/id
-
-## Get location of a meeting (public for all participants)
-GET meetings/id/location
-
-## Update meeting
-PUT meetings/id
-
-## Delete a meeting
-DELETE meetings/id
-#####
-
-
-#####
-# Bluetooth beacons related endpoints
-/beacons
-
-## Get information of all all beacons
-GET beacons/
-
-## Add a beacon with location
-POST beacons/
-
-## Get information of beacon
-GET beacons/id
-
-## Change beacon information
-PUT beacons/id
-
-## Delete a beacon from database
-DELETE beacons/id
-
-## Get location of beacon
-GET beacons/id/location
-#####
-
-
-#####
 # Endpoints needed for user management
 /users
 
@@ -127,8 +18,100 @@ PUT users/id
 DELETE users/id
 
 ## Get all lists of user
-GET users/id/lists
-
-## Get all meetings of user
-GET users/id/meetings
+GET users/id/groups
 #####
+
+#####
+## Get information of current user
+GET users/me
+
+## Change user information
+PUT users/me
+
+## Delete user
+DELETE users/me
+
+## Logout
+PUT users/me/logout
+
+## Set location information
+PUT users/me/location
+
+## Delete location information
+DELETE users/me/location
+#####
+
+#####
+# Create and modify friends groups
+/users/me/groups
+
+## Get all groups of user
+GET users/me/groups
+
+## Create a groups
+POST users/me/groups
+
+## Show groups information
+GET users/me/groups/id
+
+## Change groups information
+PUT users/me/groups/id
+
+## Delete groups
+DELETE users/me/groups/id
+
+## Add user to groups TODO: think about a better one
+PUT users/me/groups/id/users
+
+## Remove user from list TODO: think about a better one
+DELETE users/me/groups/id/users/uid
+#####
+
+#####
+# Hotspot informations
+/hotspots
+
+## Get a list all hotspots
+GET hotspots/
+
+## Get a hotsport via ID
+GET /hotspots/{id}
+
+## Get a specific hotspot like mensa or library
+GET /hotspots/mensa
+GET /hotspots/library
+
+## Get all beacon information for hotspot
+GET /hotspots/{id|mensa|library}/beacons/
+
+## Get a specific beacon information for a hotspot
+GET /hotspots/{id|mensa|library}/beacons/{id}
+
+## Get all friends in the specific hotspot
+GET /hotspots/{id|mensa|library}/active_friends
+#####
+
+##### example for friends in the hotspot
+/hotspots/mensa/active_friends
+{
+  friends: [871283,8172837213]
+  friends_locations: [{
+    id: 9820189238,
+    location : {
+      lat: 928931,
+      lon: 12989312
+    }
+  }]
+}
+#####
+
+
+Subinformation (Q: Where should it be persisted? User model, Hotspot model?):
+-> Autoping YES/NO: If I enter the hotspot please ping my friends automatically
+-> AutoLocation YES/NO: Locate me via Bluetooth automatically when I have turned it on
+
+Use cases:
+-> Notify ME if I enter the hotspot
+--> Option: Ping my Friends at the hotspot
+--> Option: Detail my location: either via Bluetooth or by manual pinnning
+-> Notify ME if others are already at the hotspot where I entered
