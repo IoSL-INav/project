@@ -1,71 +1,46 @@
 #####
 # Endpoints needed for user management
-/users
 
-## Get list of all users
-GET users/
-
-## Add user to system
-POST users/
-
-## Get information of user
-GET users/id
-
-## Change user information
-PUT users/id
-
-## Delete user
-DELETE users/id
-
-## Get all lists of user
-GET users/id/groups
-#####
-
-#####
 ## Get information of current user
-GET users/me
+GET /users/me
 
 ## Change user information
-PUT users/me
+PUT /users/me
 
 ## Delete user
-DELETE users/me
+DELETE /users/me
 
 ## Logout
-PUT users/me/logout
+GET /users/me/logout
 
 ## Set location information
-PUT users/me/location
+PUT /users/me/location
 
 ## Delete location information
-DELETE users/me/location
-#####
-
-#####
-# Create and modify friends groups
-/users/me/groups
+DELETE /users/me/location
 
 ## Get all groups of user
-GET users/me/groups
+GET /users/me/groups
 
-## Create a groups
-POST users/me/groups
+## Create a group
+POST /users/me/groups
 
 ## Show groups information
-GET users/me/groups/id
+GET /users/me/groups/id
 
 ## Change groups information
-PUT users/me/groups/id
+PUT /users/me/groups/id
 
-## Delete groups
-DELETE users/me/groups/id
+## Delete specific group
+DELETE /users/me/groups/id
 
-## Add user to groups TODO: think about a better one
-PUT users/me/groups/id/users
+## Add user to groups
+POST /users/me/groups/id/users
 
-## Remove user from list TODO: think about a better one
-DELETE users/me/groups/id/users/uid
+## Remove user from list
+DELETE /users/me/groups/id/users/uid
 #####
+
 
 #####
 # Hotspot informations
@@ -107,7 +82,7 @@ GET /hotspots/{id|mensa|library}/active_friends
 
 
 Subinformation (Q: Where should it be persisted? User model, Hotspot model?):
--> Autoping YES/NO: If I enter the hotspot please ping my friends automatically
+-> AutoPing YES/NO: If I enter the hotspot please ping my friends automatically
 -> AutoLocation YES/NO: Locate me via Bluetooth automatically when I have turned it on
 
 Use cases:
