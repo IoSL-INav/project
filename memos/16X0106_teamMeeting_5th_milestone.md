@@ -4,7 +4,7 @@
 Andreas, Lennart, Jan, Mathias, Sebastian (10:30), Eridy (11:00)
 
 ## Begin
-10th Dec, 10:15 am
+6th Jan, 10:15 am
 
 ## Notes
 * Mobile applications
