@@ -19,6 +19,12 @@ PUT /users/me/location
 ## Delete location information
 DELETE /users/me/location
 
+## View pending friend requests
+GET /users/me/friend_requests
+
+## Answer pending friend request
+PUT /users/me/friend_requests/fid
+
 ## Get all groups of user
 GET /users/me/groups
 
