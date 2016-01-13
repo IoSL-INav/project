@@ -40,6 +40,19 @@
 	DELETE /users/me/groups/id/users/uid
 
 ---
+# Companion Requests
+	/companionrequests
+
+## Show pending requests
+	GET /companionrequests
+
+## create a companion requests
+	POST /companionrequests
+
+{
+ "userID":"<insert companion id here>"
+}
+---
 # Hotspot informations
 	/hotspots
 
