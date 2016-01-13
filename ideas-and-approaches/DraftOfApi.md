@@ -106,3 +106,21 @@ Use cases:
 
 ## Server
 	piazza.snet.tu-berlin.de
+	
+	
+## Request header 
+
+	
+
+	Content-Type: application/json; 
+
+	Accept: ​*/*​
+	Accept-Encoding: gzip, deflate, sdch
+	Accept-Language: en-US,en;q=0.8,de;q=0.6
+	Cookie: connect.sid=s%3Aa0S6oMtV2IyR4p2DKj3ziWBwnqjOXy_i.nre0vqqr%2Fsxt6sDCYaqCZHL5ne5OhJvQArS2cBnX5dk
+
+## Response header 
+	Date: Sun, 10 Jan 2016 15:24:09 GMT 
+	Content-Type: application/json; charset=utf-8 
+	Content-Length: 70 
+	ETag: W/"46-oMgJvJcGXpM6JluPC6DAXA"

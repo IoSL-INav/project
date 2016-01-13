@@ -4,7 +4,7 @@
 Andreas, Lennart, Jan, Mathias, Sebastian (10:30), Eridy (11:00)
 
 ## Begin
-10th Dec, 10:15 am
+6th Jan, 10:15 am
 
 ## Notes
 * Mobile applications
@@ -39,13 +39,13 @@ Andreas, Lennart, Jan, Mathias, Sebastian (10:30), Eridy (11:00)
     * accept every location (long & lat, bluetooth region[major&minor], eduroam [floor,building])
     * what is the server send to the client if you want to find a friend?
     * long & lat, bluetooth reagion, floor & building
- * possibility to get locations are:
-   * Manuel Pin Pointing
-   * Bluetooth
-   * Eduroam TUBIT API
-   * Android API
-   * IOS API
- * Presentation ideas
+  * Possibility to get location are:
+    * Manuel Pin Pointing
+    * Bluetooth
+    * Eduroam TUBIT API
+    * Android API
+    * IOS API
+  * Presentation ideas
     * Table/Graphics:
   	  * which usecases (Manuel PinPointing should work at the presentation for the mensa, Bluetooth region should work for the mensa)
   	  * make list of scenario what we can do (define what we want todo [1 is primary and 2 is after 1] and 3 is optional)
@@ -53,7 +53,7 @@ Andreas, Lennart, Jan, Mathias, Sebastian (10:30), Eridy (11:00)
   		    1 manuel pin-pointing (step by step)
   		    2 bluetooth positioning
   		    3 geo-fenzzing with apis (android & ios)
- * TODOs what we want todo on sunday
+  * TODOs what we want todo on sunday
    	* we publish the docker on the server
    	* give example what you can reach
    	* polling is the first notification (long polling is optional)
