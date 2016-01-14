@@ -2,82 +2,79 @@
 # Endpoints needed for user management
 
 ## Get information of current user
-GET /users/me
+	GET /users/me
 
 ## Change user information
-PUT /users/me
+	PUT /users/me
 
 ## Delete user
-DELETE /users/me
+	DELETE /users/me
 
 ## Logout
-GET /users/me/logout
+	GET /users/me/logout
 
 ## Set location information
-PUT /users/me/location
+	PUT /users/me/location
 
 ## Delete location information
-DELETE /users/me/location
+	DELETE /users/me/location
 
 ## Get all groups of user
-GET /users/me/groups
+	GET /users/me/groups
 
 ## Create a group
-POST /users/me/groups
+	POST /users/me/groups
 
 ## Show groups information
-GET /users/me/groups/id
+	GET /users/me/groups/id
 
 ## Change groups information
-PUT /users/me/groups/id
+	PUT /users/me/groups/id
 
 ## Delete specific group
-DELETE /users/me/groups/id
+	DELETE /users/me/groups/id
 
 ## Add user to groups
-POST /users/me/groups/id/users
+	POST /users/me/groups/id/users
 
 ## Remove user from list
-DELETE /users/me/groups/id/users/uid
-#####
+	DELETE /users/me/groups/id/users/uid
 
-
-#####
+---
 # Hotspot informations
-/hotspots
+	/hotspots
 
 ## Get a list all hotspots
-GET hotspots/
+	GET hotspots/
 
 ## Get a hotsport via ID
-GET /hotspots/{id}
+	GET /hotspots/{id}
 
 ## Get a specific hotspot like mensa or library
-GET /hotspots/mensa
-GET /hotspots/library
+	GET /hotspots/mensa
+	GET /hotspots/library
 
 ## Get all beacon information for hotspot
-GET /hotspots/{id|mensa|library}/beacons/
+	GET /hotspots/{id|mensa|library}/beacons/
 
 ## Get a specific beacon information for a hotspot
-GET /hotspots/{id|mensa|library}/beacons/{id}
+	GET /hotspots/{id|mensa|library}/beacons/{id}
 
 ## Get all friends in the specific hotspot
-GET /hotspots/{id|mensa|library}/active_friends
-#####
+	GET /hotspots/{id|mensa|library}/active_friends
 
-##### example for friends in the hotspot
-/hotspots/mensa/active_friends
-{
-  friends: [871283,8172837213]
-  friends_locations: [{
+### example for friends in the hotspot
+	/hotspots/mensa/active_friends
+	{
+  	friends: [871283,8172837213]
+  	friends_locations: [{
     id: 9820189238,
     location : {
       lat: 928931,
       lon: 12989312
     }
-  }]
-}
+	}]
+	}
 #####
 
 
@@ -90,3 +87,7 @@ Use cases:
 --> Option: Ping my Friends at the hotspot
 --> Option: Detail my location: either via Bluetooth or by manual pinnning
 -> Notify ME if others are already at the hotspot where I entered
+
+
+## Links
+	https://tub2go.tubit.tu-berlin.de/open/index.php?nav=mse&kto=LBS&pass=s!mey5ao&action=getPosInfo

@@ -14,6 +14,7 @@ Andy and I are proposing following user stories to guide the initial phase of ou
 Based on the user stories mentioned above this would be our initial use cases.
 
 **Use case: Register as user**
+
 * Actors: unregistered user, mobile application, federation provider, backend
 * Flow
   * Unregistered user downloads the app from any kind of App Store
@@ -22,6 +23,7 @@ Based on the user stories mentioned above this would be our initial use cases.
   * Mobile application shows return message from backend/federation provider and eventually forwards to main part of application
 
 **Use case: Add a friend**
+
 * Actors: registered user Alice, registered user Bob, mobile application, backend
 * Flow
   * Alice taps on the button 'Manage friends' and then presses the '+' button. She puts in Bob's tubIT mail address
@@ -35,6 +37,7 @@ Based on the user stories mentioned above this would be our initial use cases.
 Location sharing is now done via a mixture of geo-fencing so called hotspots and detecting those as well as the user's settings with whom to share the entering/leaving of such a hotspot. Therefore the process of sharing a user's location involves editing the user's settings.
 
 **Use case: Show location to friends (most privacy, most interaction)**
+
 * Actors: registered user Alice, mobile application, backend
 * Flow
   * Alice taps on the settings menu button
@@ -50,6 +53,7 @@ Location sharing is now done via a mixture of geo-fencing so called hotspots and
   * Mobile application syncs gathered context information with Alice's backend information and eventually pings specified friend groups
 
 **Use case: Show location to friends (medium privacy, medium interaction)**
+
 * Actors: registered user Alice, mobile application, backend
 * Flow
   * Alice taps on the settings menu button
@@ -65,6 +69,7 @@ Location sharing is now done via a mixture of geo-fencing so called hotspots and
   * Mobile application syncs gathered context information with Alice's backend information and eventually pings specified friend groups
 
 **Use case: Show location to friends (least privacy, least interaction)**
+
 * Actors: registered user Alice, mobile application, backend
 * Flow
   * Alice taps on the settings menu button
@@ -79,6 +84,7 @@ Location sharing is now done via a mixture of geo-fencing so called hotspots and
   * Mobile application syncs gathered context information with Alice's backend information and eventually pings specified friend groups
 
 **Use case: Find friends already in my area**
+
 * Actors: registered user Alice, mobile application, backend
 * Flow
   * Alice taps on the button 'Show friends in my area'
@@ -90,6 +96,7 @@ Location sharing is now done via a mixture of geo-fencing so called hotspots and
   * Mobile application takes response and either signals that no trackable friends are currently around or shows a map with drawn locations.
 
 **Use case: Turn off location tracking**
+
 * Actors: registered user Bob, mobile application, backend
 * Flow
   * Bob taps on 'Turn off location'
