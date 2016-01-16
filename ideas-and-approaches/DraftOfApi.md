@@ -91,9 +91,9 @@ Server Response:
 ## create a companion requests
 	POST /companionrequests
 
-{
- "userID":"insert companion id here"
-}
+	{
+ 	"userID":"insert companion id here"
+	}
 
 ## get a companion requests status / informations
 	GET /companionrequests/'companienrequestID'
