@@ -5,6 +5,14 @@
 
 ## Change user information
 	PUT /users/me
+	
+	{
+	"userName":"stringUsername",
+	"userAutoPing":true,
+	"userAutoGroup":"stringGroupname",
+	"userAutoLocate":false,
+	}
+	
 
 ## Delete user
 	DELETE /users/me
@@ -51,6 +59,7 @@
 ## Delete specific group
 	DELETE /users/me/groups/id
 
+
 ## Add user to groups
 	POST /users/me/groups/id/users
 	- not implemented yet -
@@ -85,8 +94,8 @@
 ## Get all friends in the specific hotspot
 	GET /hotspots/{id|mensa|library}/active_friends
 
-### example for friends in the hotspot
-	/hotspots/mensa/active_friends
+### example for friends in the hotspot (update Polling)
+	GET /hotspots/_hotspotid_/active_friends
 	{
   	friends: [871283,8172837213]
   	friends_locations: [{
