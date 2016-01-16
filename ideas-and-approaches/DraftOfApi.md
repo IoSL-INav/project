@@ -75,11 +75,15 @@ Server Response:
 
 ## Add user to groups
 	POST /users/me/groups/id/users
-	- not implemented yet -
 	{
-	 
+ 		"userID":"insert companion id here"
 	}
-	
+
+Server Response:
+	{
+		"status": "success"
+		"reason": "user added to group"
+	}
 
 ## Remove user from list
 	DELETE /users/me/groups/id/users/uid
@@ -95,7 +99,7 @@ Server Response:
 	POST /companionrequests
 
 	{
- 	"userID":"insert companion id here"
+ 		"userID":"insert companion id here"
 	}
 
 ## get a companion requests status / informations
