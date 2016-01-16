@@ -44,9 +44,12 @@
 Server Response:
 
 	[{
-	"name":"All friends",
-	"_id":"569a9753af6c7701000cdb3e",
-	"members":["string_id","string_id"]
+		"name":"All friends",
+		"_id":"569aa3726b01d4f67e7",
+		"members":[{
+			"_id":"userID-234-2-234-234-",
+			"name":"edugain.72dd37f8ase04c21fd21591e184cd37d8b"
+		}]
 	}]
 
 ## Create a group
