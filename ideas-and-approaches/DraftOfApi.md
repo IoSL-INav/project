@@ -27,6 +27,8 @@
 	PUT /users/me/location
 	(only those objects that are available)
 	{
+	"beaconMAjor":"123.323"
+	"beconMinor"121.000"
 	"userLat":50.99999, 
 	"userLon":49.99999, 
 	"userBuilding":"stringUserBulding",
@@ -38,6 +40,14 @@
 
 ## Get all groups of user
 	GET /users/me/groups
+	
+Server Response:
+
+	[{
+	"name":"All friends",
+	"_id":"569a9753af6c7701000cdb3e",
+	"members":["string_id","string_id"]
+	}]
 
 ## Create a group
 	POST /users/me/groups
