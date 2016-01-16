@@ -82,6 +82,35 @@ Server Response:
 	DELETE /users/me/groups/id/users/uid
 
 ---
+# Companion Requests
+	/companionrequests
+
+## Show pending requests
+	GET /companionrequests
+
+## create a companion requests
+	POST /companionrequests
+
+{
+ "userID":"insert companion id here"
+}
+
+## get a companion requests status / informations
+	GET /companionrequests/'companienrequestID'
+
+## change a companion requests
+	PUT /companionrequests/'companienrequestID'
+{
+ "accept":true
+}
+or
+{
+ "deny":true
+}
+
+## delete a companion requests
+	DELETE /companionrequests/'companienrequestID'
+---
 # Hotspot informations
 	/hotspots
 
