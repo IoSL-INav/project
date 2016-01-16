@@ -17,7 +17,7 @@
 
 ## Set location information
 	PUT /users/me/location
-	
+	(only those objects that are available)
 	{
 	"userLat":50.99999, 
 	"userLon":49.99999, 
@@ -40,15 +40,24 @@
 
 ## Show groups information
 	GET /users/me/groups/id
+	
 
 ## Change groups information
 	PUT /users/me/groups/id
+	{
+	"newGroupName":"stringGroupname"
+	}
 
 ## Delete specific group
 	DELETE /users/me/groups/id
 
 ## Add user to groups
 	POST /users/me/groups/id/users
+	- not implemented yet -
+	{
+	 
+	}
+	
 
 ## Remove user from list
 	DELETE /users/me/groups/id/users/uid
