@@ -9,6 +9,9 @@
 ## Delete user
 	DELETE /users/me
 
+## Login
+	GET /login
+	
 ## Logout
 	GET /users/me/logout
 
@@ -39,19 +42,6 @@
 ## Remove user from list
 	DELETE /users/me/groups/id/users/uid
 
----
-# Companion Requests
-	/companionrequests
-
-## Show pending requests
-	GET /companionrequests
-
-## create a companion requests
-	POST /companionrequests
-
-{
- "userID":"<insert companion id here>"
-}
 ---
 # Hotspot informations
 	/hotspots
@@ -89,35 +79,22 @@
 	}
 
 
-Subinformation (Q: Where should it be persisted? User model, Hotspot model?):
--> AutoPing YES/NO: If I enter the hotspot please ping my friends automatically
--> AutoLocation YES/NO: Locate me via Bluetooth automatically when I have turned it on
 
-Use cases:
+#####Subinformation (Q: Where should it be persisted? User model, Hotspot model?):
+
+-> **AutoPing YES/NO**: If I enter the hotspot please ping my friends automatically
+
+-> **AutoLocation YES/NO**: Locate me via Bluetooth automatically when I have turned it on
+
+**Use cases:**
 -> Notify ME if I enter the hotspot
+
 --> Option: Ping my Friends at the hotspot
+
 --> Option: Detail my location: either via Bluetooth or by manual pinnning
+
 -> Notify ME if others are already at the hotspot where I entered
 
 
 ## Links
 	https://tub2go.tubit.tu-berlin.de/open/index.php?nav=mse&kto=LBS&pass=s!mey5ao&action=getPosInfo
-
-
-## Server
-	piazza.snet.tu-berlin.de
-	
-	
-## Request header 
-
-	
-
-	Content-Type: application/json; 
-	Accept: ​*/*​
-	Cookie: connect.sid= the_users_token 
-
-## Response header 
-	Date: Sun, 10 Jan 2016 15:24:09 GMT 
-	Content-Type: application/json; charset=utf-8 
-	Content-Length: 70 
-	ETag: W/"46-oMgJvJcGXpM6JluPC6DAXA"
