@@ -17,6 +17,13 @@
 
 ## Set location information
 	PUT /users/me/location
+	
+	{
+	"userLat":50.99999, 
+	"userLon":49.99999, 
+	"userBuilding":"stringUserBulding",
+	"userFloor":"stringUSerFlor"
+	}
 
 ## Delete location information
 	DELETE /users/me/location
@@ -26,6 +33,10 @@
 
 ## Create a group
 	POST /users/me/groups
+	
+	{
+	"groupName":"stringGroupname"
+	}
 
 ## Show groups information
 	GET /users/me/groups/id
