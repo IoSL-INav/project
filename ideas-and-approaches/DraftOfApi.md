@@ -1,175 +1,188 @@
 # Endpoints needed for user management
 
+
 ## Get information of current user
 	GET /users/me
+
 
 ## Change user information
 	PUT /users/me
 	
 	{
-	"userName":"stringUsername",
-	"userAutoPing":true,
-	"userAutoGroup":"stringGroupname",
-	"userAutoLocate":false,
+		"userName": "stringUserName",
+		"userAutoPing": true,
+		"userAutoGroup": "stringGroupName",
+		"userAutoLocate": false
 	}
 	
 
 ## Delete user
 	DELETE /users/me
 
+
 ## Login
 	GET /login
-	
+
+
 ## Logout
 	GET /users/me/logout
 
+
 ## Set location information
 	PUT /users/me/location
-	(only those objects that are available)
+
 	{
-	"beaconMAjor":"123.323"
-	"beconMinor"121.000"
-	"userLat":50.99999, 
-	"userLon":49.99999, 
-	"userBuilding":"stringUserBulding",
-	"userFloor":"stringUSerFlor"
+		"userBuilding": "stringUserBuilding",
+		"userFloor": "stringUserFloor",
+		"userMajor": 1234,
+		"userMinor": 5679,
+		"userLat": 50.99999,
+		"userLon": 49.99999
 	}
+
 
 ## Delete location information
 	DELETE /users/me/location
 
+
 ## Get all groups of user
 	GET /users/me/groups
 	
-Server Response:
+Server response:
 
 	[{
-		"name":"All friends",
-		"_id":"569aa3726b01d4f67e7",
+		"name": "All friends",
+		"_id": "569aa...d4f67e7",
 		"members":[{
-			"_id":"userID-234-2-234-234-",
-			"name":"edugain.72dd37f8ase04c21fd21591e184cd37d8b"
+			"_id": "userID-...-234-",
+			"name": "edugain.72dd37f8ase...1e184cd37d8b"
 		}]
 	}]
+
 
 ## Create a group
 	POST /users/me/groups
 	
 	{
-	"groupName":"stringGroupname"
+		"groupName": "stringGroupName"
 	}
 
+
 ## Show groups information
-	GET /users/me/groups/id
+	GET /users/me/groups/groupID
 	
 
 ## Change groups information
-	PUT /users/me/groups/id
+	PUT /users/me/groups/groupID
 	{
-	"newGroupName":"stringGroupname"
+		"newGroupName": "stringGroupName"
 	}
 
+
 ## Delete specific group
-	DELETE /users/me/groups/id
+	DELETE /users/me/groups/groupID
 
 
 ## Add user to groups
-	POST /users/me/groups/id/users
+	POST /users/me/groups/groupID/users
+
 	{
- 		"userID":"insert companion id here"
+		"userID": "insert companionID here"
 	}
 
-Server Response:
+Server response:
+
 	{
 		"status": "success"
 		"reason": "user added to group"
 	}
 
-## Remove user from list
-	DELETE /users/me/groups/id/users/uid
 
----
+## Remove user from list
+	DELETE /users/me/groups/groupID/users/userID
+
+
 # Companion Requests
 	/companionrequests
+
 
 ## Show pending requests
 	GET /companionrequests
 
-## create a companion requests
+
+## Create a companion request
 	POST /companionrequests
 
 	{
- 		"userID":"insert companion id here"
+		"userID": "insert companion id here"
 	}
 
-## get a companion requests status / informations
-	GET /companionrequests/'companienrequestID'
 
-## change a companion requests
-	PUT /companionrequests/'companienrequestID'
-{
- "accept":true
-}
+## Get a companion request status
+	GET /companionrequests/companienrequestID
+
+
+## Change a companion request
+	PUT /companionrequests/companienrequestID
+
+	{
+		"accept": true
+	}
+	
 or
-{
- "deny":true
-}
 
-## delete a companion requests
-	DELETE /companionrequests/'companienrequestID'
----
-# Hotspot informations
+	{
+		"deny": true
+	}
+
+
+## Delete a companion requests
+	DELETE /companionrequests/companienrequestID
+
+
+# Hotspot information
 	/hotspots
 
-## Get a list all hotspots
+
+## Get a list of all hotspots
 	GET hotspots/
 
-## Get a hotsport via ID
-	GET /hotspots/{id}
 
-## Get a specific hotspot like mensa or library
-	GET /hotspots/mensa
-	GET /hotspots/library
+## Get a hotsport via ID
+	GET /hotspots/hotspotID
+
+
+## Get all friends in specific hotspot
+	GET /hotspots/hotspotID/active_friends
+
+Server response might look like this (not final):
+
+	{
+	  	"friends": [{
+	  		"_id": "userID01",
+	  		"name": "userName01",
+	  		"location": {
+	  			"coordinates": [ 13.3, 45.5 ],
+	  			"building": "BA",
+	  			"floor": "12th",
+	  			"accuracy": 2
+	  		}
+	  	}, {
+			"_id": "userID02",
+	  		"name": "userName02",
+	  		"location": {
+	  			"coordinates": [ 14.3, 42.5 ],
+	  			"building": "AB",
+	  			"floor": "19th",
+	  			"accuracy": 1
+	  		}
+	  	}]
+    }
+
 
 ## Get all beacon information for hotspot
-	GET /hotspots/{id|mensa|library}/beacons/
+	GET /hotspots/hotspotID/beacons/
+
 
 ## Get a specific beacon information for a hotspot
-	GET /hotspots/{id|mensa|library}/beacons/{id}
-
-## Get all friends in the specific hotspot
-	GET /hotspots/{id|mensa|library}/active_friends
-
-### example for friends in the hotspot (update Polling)
-	GET /hotspots/_hotspotid_/active_friends
-	{
-  	friends: [871283,8172837213]
-  	friends_locations: [{
-    id: 9820189238,
-    location : {
-      lat: 928931,
-      lon: 12989312
-    }
-	}]
-	}
-
-
-
-#####Subinformation (Q: Where should it be persisted? User model, Hotspot model?):
-
--> **AutoPing YES/NO**: If I enter the hotspot please ping my friends automatically
-
--> **AutoLocation YES/NO**: Locate me via Bluetooth automatically when I have turned it on
-
-**Use cases:**
--> Notify ME if I enter the hotspot
-
---> Option: Ping my Friends at the hotspot
-
---> Option: Detail my location: either via Bluetooth or by manual pinnning
-
--> Notify ME if others are already at the hotspot where I entered
-
-
-## Links
-	https://tub2go.tubit.tu-berlin.de/open/index.php?nav=mse&kto=LBS&pass=s!mey5ao&action=getPosInfo
+	GET /hotspots/hotspotID/beacons/beaconID
