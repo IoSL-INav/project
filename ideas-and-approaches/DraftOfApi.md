@@ -155,11 +155,11 @@ or
 ## Get all friends in specific hotspot
 	GET /hotspots/hotspotID/active_friends
 
-Server response might look like this (not final):
+Server response:
 
 	{
 	  	"friends": [{
-	  		"_id": "userID01",
+	  		"id": "userID01",
 	  		"name": "userName01",
 	  		"location": {
 	  			"coordinates": [ 13.3, 45.5 ],
@@ -168,7 +168,7 @@ Server response might look like this (not final):
 	  			"accuracy": 2
 	  		}
 	  	}, {
-			"_id": "userID02",
+			"id": "userID02",
 	  		"name": "userName02",
 	  		"location": {
 	  			"coordinates": [ 14.3, 42.5 ],
