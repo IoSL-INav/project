@@ -3,8 +3,8 @@
 ## Participants
 Andreas, Lennart, Jan, Mathias, Sebastian, Eridy
 
-## Begin
-6th Jan, 10:00 am
+## Time
+20th Jan, 10:00 am - 11:00 am
 
 ## Notes
 * Mobile applications
@@ -15,7 +15,7 @@ Andreas, Lennart, Jan, Mathias, Sebastian, Eridy
 * Backend
   * TODO: adjust adding friends to adding via mail address
   * TODO: extend updateLocation to longitude and latitude
-  * TODO: paramterize server app to use a testing config and then use a mockup authentification for testing
+  * TODO: parameterize server app to use a testing config and then use a mockup authentification for testing
   * TODO: comment and document code
   * TODO: complete the last tasks (logging compatible to logstash?)
 * Final presentation
