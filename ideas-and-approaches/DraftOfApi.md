@@ -114,7 +114,7 @@ Server response:
 	POST /companionrequests
 
 	{
-		"userID": "insert companion id here"
+		"userEmail": "insert companion mail address here"
 	}
 
 
