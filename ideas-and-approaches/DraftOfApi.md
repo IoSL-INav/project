@@ -34,11 +34,11 @@
 	{
 		"userBuilding": "stringUserBuilding",
 		"userFloor": "stringUserFloor",
-		"userMajor": 1234,
-		"userMinor": 5679,
 		"userLat": 50.99999,
 		"userLon": 49.99999
 	}
+	
+	
 
 
 ## Delete location information
