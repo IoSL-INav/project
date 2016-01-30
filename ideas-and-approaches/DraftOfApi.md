@@ -15,6 +15,18 @@
 		"userAutoLocate": false
 	}
 
+	Server response:
+	
+```
+	{
+			userID: 'ee000000-1234-abcd-def71-83a736f72941',
+  		userName: 'marksUsername',
+  		userEmail: 'mark.smith@web.org',
+  		userAutoPing: true,
+  		userAutoLocate: false
+	}
+```
+
 
 ## Delete user
 	DELETE /users/me
@@ -86,7 +98,7 @@ Server response:
     group: { name: 'updateGroupName',
              _id: '56acaf64a980090d254dbfc8',
              members: []
-					} 
+					}
 	}
 
 
