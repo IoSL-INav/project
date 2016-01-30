@@ -7,14 +7,14 @@
 
 ## Change user information
 	PUT /users/me
-	
+
 	{
 		"userName": "stringUserName",
 		"userAutoPing": true,
 		"userAutoGroup": "stringGroupName",
 		"userAutoLocate": false
 	}
-	
+
 
 ## Delete user
 	DELETE /users/me
@@ -39,8 +39,8 @@
 		"userLat": 50.99999,
 		"userLon": 49.99999
 	}
-	
-	
+
+
 
 
 ## Delete location information
@@ -49,7 +49,7 @@
 
 ## Get all groups of user
 	GET /users/me/groups
-	
+
 Server response:
 
 	[{
@@ -64,7 +64,7 @@ Server response:
 
 ## Create a group
 	POST /users/me/groups
-	
+
 	{
 		"groupName": "stringGroupName"
 	}
@@ -72,12 +72,21 @@ Server response:
 
 ## Show groups information
 	GET /users/me/groups/groupID
-	
+
 
 ## Change groups information
 	PUT /users/me/groups/groupID
 	{
 		"newGroupName": "stringGroupName"
+	}
+
+	Server Response:
+	{ status: 'success',
+    reason: 'group updated',
+    group: { name: 'updateGroupName',
+             _id: '56acaf64a980090d254dbfc8',
+             members: []
+					} 
 	}
 
 
@@ -130,7 +139,7 @@ Server response:
 	{
 		"accept": true
 	}
-	
+
 or
 
 	{
