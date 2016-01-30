@@ -168,6 +168,18 @@ Server response:
 ## Show pending requests
 	GET /companionrequests
 
+```
+Server response:
+
+[{
+		"_id": "56accf6e4a94cae610c223c9"
+		"from": "b9b0d35c-...-cd06d7b46d70"
+		"to": "b9b0d35c-...-cd06d7b23634f2"
+		"status": "pending"
+		"__v": 0
+}]
+```
+
 
 ## Create a companion request
 
@@ -180,8 +192,31 @@ POST /companionrequests
 ```
 
 
+```
+Server response:
+
+{
+		"status": "success"
+		"reason": "companion request sent"
+		"companionRequestID": "56accf6e4a94cae610c223c9"
+}
+```
+
+
 ## Get a companion request status
 	GET /companionrequests/companienrequestID
+
+```
+Server response:
+
+    {
+			"_id": "56accf6e4a94cae610c223c9"
+			"from": "b9b0d35c-...-cd06d7b46d70"
+			"to": "b9b0d35c-...-cd06d7b23634f2"
+			"status": "pending"
+			"__v": 0
+		}
+```
 
 
 ## Change a companion request
@@ -199,10 +234,29 @@ or
     "deny": true
 }
 ```
+```
+Server response:
+
+{
+    "status": "success"
+    "reason": "companion request accepted"
+}
+```
 
 
 ## Delete a companion requests
-	DELETE /companionrequests/companienrequestID
+
+```
+DELETE /companionrequests/companienrequestID
+```
+```
+Server response:
+
+{
+    "status": "success"
+    "reason": "companion request deleted"
+}
+```
 
 
 # Hotspot information
