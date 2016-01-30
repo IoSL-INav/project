@@ -402,7 +402,7 @@ Server response:
 ## Get all friends in specific hotspot
 
 ```
-GET /hotspots/active_friends
+GET /hotspots/hotspotID/active_friends
 ```
 
 ```
