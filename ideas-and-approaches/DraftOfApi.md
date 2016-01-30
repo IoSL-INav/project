@@ -264,7 +264,122 @@ Server response:
 
 
 ## Get a list of all hotspots
-	GET hotspots/
+
+```
+GET hotspots/
+```
+
+
+```
+Server response:
+
+[
+  {
+    "_id": "56acd...1f6f81162c",
+    "name": "Mensa",
+    "beacons": [
+      {
+        "name": "shoe",
+        "companyUUID": "D0D3FA86-....-6AF44C51822F",
+        "major": 9386,
+        "minor": 56215,
+        "location": {
+          "coordinates": [
+            13.326402,
+            52.509646
+          ],
+          "building": "Mensa",
+          "floor": "Mensa 2.OG"
+        }
+      },
+      {
+        "name": "car",
+        "companyUUID": "D0D3FA86-....-6AF41DFC866B",
+        "major": 62242,
+        "minor": 28193,
+        "location": {
+          "coordinates": [
+            13.326402,
+            52.509646
+          ],
+          "building": "Mensa",
+          "floor": "Mensa 2. OG"
+        }
+      },
+      {
+        "name": "fridge",
+        "companyUUID": "D0D3FA86-....-6AF4BC5AD3C5",
+        "major": 62245,
+        "minor": 37267,
+        "location": {
+          "coordinates": [
+            13.32576,
+            52.509851
+          ],
+          "building": "Mensa",
+          "floor": "Mensa 1. OG"
+        }
+      },
+      {
+        "name": "door",
+        "companyUUID": "D0D3FA86-....-6AF4BB14CA82",
+        "major": 42882,
+        "minor": 54653,
+        "location": {
+          "coordinates": [
+            13.32576,
+            52.509851
+          ],
+          "building": "Mensa",
+          "floor": "Mensa 1. OG"
+        }
+      },
+      {
+        "name": "purpleDoor",
+        "companyUUID": "D0D3FA86-....-6af401c6e22d",
+        "major": 49816,
+        "minor": 55395,
+        "location": {
+          "coordinates": [
+            13.326402,
+            52.509646
+          ],
+          "building": "Mensa",
+          "floor": "Mensa 2. OG"
+        }
+      },
+      {
+        "name": "blueBeacon",
+        "companyUUID": "b9407f30-....-25556b57fe6d",
+        "major": 1000,
+        "minor": 20010,
+        "location": {
+          "coordinates": [
+            13.326261,
+            52.509489
+          ],
+          "building": "Mensa",
+          "floor": "Mensa 1. OG"
+        }
+      },
+      {
+        "name": "greenBeacon",
+        "companyUUID": "b9407f30-....-25556b57fe6d",
+        "major": 1002,
+        "minor": 3090,
+        "location": {
+          "coordinates": [
+            13.325618,
+            52.509693
+          ],
+          "building": "Mensa",
+          "floor": "Mensa 1. OG"
+        }
+      }
+    ]
+  }
+]
+```
 
 
 ## Get a hotsport via ID
@@ -274,7 +389,7 @@ Server response:
 ## Get all friends in specific hotspot
 
 ```
-GET /hotspots/hotspotID/active_friends
+GET /hotspots/active_friends
 ```
 
 
