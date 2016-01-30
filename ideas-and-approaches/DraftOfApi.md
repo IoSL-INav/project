@@ -171,13 +171,21 @@ Server response:
 ```
 Server response:
 
-[{
-		"_id": "56accf6e4a94cae610c223c9"
-		"from": "b9b0d35c-...-cd06d7b46d70"
-		"to": "b9b0d35c-...-cd06d7b23634f2"
-		"status": "pending"
-		"__v": 0
-}]
+[
+  {
+    "_id": "56acd971e1014e8631e694cf",
+    "from": {
+      "_id": "b9b0d35c-....-cd06d7b46d70",
+      "name": "edugain.....7be1c79b"
+    },
+    "to": {
+      "_id": "b9b0d35c-....-cd06d7b46d70",
+      "name": "edugain.....7be1c79b"
+    },
+    "status": "pending",
+    "__v": 0
+  }
+]
 ```
 
 
@@ -209,12 +217,18 @@ Server response:
 ```
 Server response:
 
-    {
-			"_id": "56accf6e4a94cae610c223c9"
-			"from": "b9b0d35c-...-cd06d7b46d70"
-			"to": "b9b0d35c-...-cd06d7b23634f2"
-			"status": "pending"
-			"__v": 0
+		{
+		  "_id": "56acd971e1014e8631e694cf",
+		  "from": {
+		    "_id": "b9b0d35c-....-cd06d7b46d70",
+		    "name": "edugain....7be1c79b"
+		  },
+		  "to": {
+		    "_id": "b9b0d35c-....-cd06d7b46d70",
+		    "name": "edugain....7be1c79b"
+		  },
+		  "status": "pending",
+		  "__v": 0
 		}
 ```
 
@@ -268,7 +282,6 @@ Server response:
 ```
 GET hotspots/
 ```
-
 
 ```
 Server response:
@@ -391,7 +404,6 @@ Server response:
 ```
 GET /hotspots/active_friends
 ```
-
 
 ```
 Server response:
