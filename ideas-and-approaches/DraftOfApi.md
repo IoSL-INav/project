@@ -6,6 +6,7 @@
 
 
 ## Change user information
+```
 	PUT /users/me
 
 	{
@@ -14,10 +15,10 @@
 		"userAutoGroup": "stringGroupName",
 		"userAutoLocate": false
 	}
-
-	Server response:
-	
 ```
+
+```
+	Server response:
 	{
 			userID: 'ee000000-1234-abcd-def71-83a736f72941',
   		userName: 'marksUsername',
