@@ -415,7 +415,7 @@ Server response:
               "coordinates": [ 13.3, 45.5 ],
               "building": "BA",
               "floor": "12th",
-              "accuracy": 2
+              "accuracyIndicator": 2
           }
       }, {
         "id": "userID02",
@@ -424,7 +424,7 @@ Server response:
               "coordinates": [ 14.3, 42.5 ],
               "building": "AB",
               "floor": "19th",
-              "accuracy": 1
+              "accuracyIndicator": 1
           }
       }]
 }
